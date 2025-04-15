@@ -1,24 +1,385 @@
 
 
-.hidden {
-   display: none;
+
+body {
+  background-image: url(../images/6466078.jpg);
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height */
+  width: 100%;  /* Ensure full width */
+  overflow-x: hidden;
+}
+
+
+ 
+.nav-menu a {
+  color: #605ec3;
+  font-family: 'Cooper Black', Arial, sans-serif; /* Example font stack */
+  font-size: 1.1rem; /* Slightly larger than default */
+  font-weight: 500; /* Medium weight */
+  text-decoration: none;
+  padding: 0.5rem 1rem; /* Better click area */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-menu a:hover {
+  color: #9c276e; /* Darker shade for hover */
 }
 
 
 
+.logo-wrap {
+  /* Break free from all grid sizing constraints */
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  grid-column: 1;
+}
+
+.logo-wrap img {
+  /* Force exact dimensions */
+  width: 100px;
+  height: auto; /* Set explicit height */
+  display: block;
+  object-fit: contain;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Navigation takes remaining space, image stays fixed */
+  align-items: center;
+  width: 100%; /* Ensures container uses full width */
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 1rem;
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0px;
+}
+
+.video-container video {
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
 
 
- .grid-con { 
+.grid-con {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: center;
+}
+
+.content h1 {
+  color: #831a93;
+  font-family: 'Cooper Black', Arial, sans-serif; /* Example font stack */
+  font-size: 1.3rem; /* Slightly larger than default */
+  font-weight: 500;
+  text-align: center;
+}
+
+.content-section {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+/* Image Styling */
+.content-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.content-image3 {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.can-image {
+  width: 40%;
+  height: auto;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  margin: 0 auto;   /* Center the image */
+  background: none;  /* Remove any background */
+  border: none;      /* Remove any borders */
+  box-shadow: none;  /* Remove shadow */
+}
+
+.can-image3 {
+  width: 30%;
+  height: auto;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  margin: 0 auto;   /* Center the image */
+  background: none;  /* Remove any background */
+  border: none;      /* Remove any borders */
+  box-shadow: none;  /* Remove shadow */
+}
+
+/* Text Box Styling */
+.text-box {
+  position: relative;
+  width: 80%;
+  margin: -40px auto 0; /* Negative margin creates overlap */
+  padding: 2rem;
+  background-color: #c76dc1d3; /* Default color - change as needed */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Distribute space around items */
+  align-items: center; /* Center items horizontally */
+  min-height: 200px;
+}
+
+.text-box p {
+  color: #e9e450; /* Text color */
+  font-family: 'Eras Light ITC', Arial, sans-serif; /* Example font stack */
+  font-size: 1.1rem; /* Slightly larger than default */
+  font-weight: 500;
+  text-align: center;
+}
+
+.text-box .contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #c76dc1d3;
+  border: 2px solid #c76dc1; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.text-box .contact-link:hover {
+  background-color: #ea83e3; /* Change background on hover */
+  color: #e9e450; /* Change text color on hover */
+}
+
+.content-section2 {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.content-image2 {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.text-box2 {
+  position: relative;
+  width: 80%;
+  margin: -40px auto 0;
+  padding: 2rem;
+  background-color: #c76dc1d3;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Distribute space around items */
+  align-items: center; /* Center items horizontally */
+  min-height: 200px; /* Ensure a minimum height */
+}
+
+.text-box2 p {
+  color: #e9e450;
+  font-family: 'Eras Light ITC', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.text-box2 .products-link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #c76dc1d3;
+  border: 2px solid #c76dc1; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.text-box2 .contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #c76dc1d3;
+  border: 2px solid #c76dc1; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.text-box2 .products-link:hover {
+  background-color: #ea83e3; /* Change background on hover */
+  color: #e9e450; /* Change text color on hover */
+}
+
+.text-box2 .contact-link:hover {
+  background-color: #ea83e3; /* Change background on hover */
+  color: #e9e450; /* Change text color on hover */
+}
+
+.logo-wrap { grid-column: span 1; }
+.nav-menu { grid-column: span 4; }
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.gif-container img {
+  width: 100%; /* Adjust as needed */
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #4f4949ba; /* Black background */
+  padding: 20px; /* Adjust padding as needed */
+  margin: 0;      /* Remove any margins */
+  width: 100%;    /* Full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns content to the right */
+  align-items: center;
+  max-width: 1200px; /* Your grid max width */
+  margin: 0 auto; /* Center the container and remove margins*/
+}
+
+.footer-logo img {
+  width: 100px; /* Adjust logo size */
+  height: auto;
+  border-radius: 15px; /* Same border radius as header logo */
+  display: block; /* Removes any extra spacing */
+}
+
+.contact-form-section {
+  width: 80%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(199, 109, 193, 0.8); /* Semi-transparent purple */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #e9e450; /* Yellow text */
+}
+
+.contact-form-section h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #831a93; /* Darker purple for heading */
+}
+
+.contact-form-section p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="date"],
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 2px solid #c76dc1;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: 100%; /* Full width for each input */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="date"]:focus,
+.contact-form textarea:focus {
+  border-color: #ea83e3;
+  outline: none; /* Remove default focus outline */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 150px;
+}
+
+.contact-form button[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  background-color: #831a93;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #ea83e3;
 }
 
 
 
-
+.hidden {
+  display: none;
+}
 
 .col-span-1	{grid-column: span 1 / span 1;}
 .col-span-2	{grid-column: span 2 / span 2;}
@@ -39,17 +400,105 @@
 
 @media screen and (min-width: 641px) {
 
-  .grid-con { 
-    display: grid;
+  .grid-con {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     max-width: 1500px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
   }
 
 
+  .logo-wrap img {
+    width: 130px;
+    height: auto;
+    border-radius: 20px 20px 20px 20px;
+}
 
+.logo-wrap { grid-column: span 3; }
+.nav-container { grid-column: span 9; }
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0px;
+}
+
+.video-container video {
+  width: 70%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.content-image {
+  width: 120%;
+  max-width: 120%;
+  z-index: 1;
+  position: relative;
+}
+
+
+
+.can-image {
+  width: 40%;
+  height: auto;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  margin: 0 auto;   /* Center the image */
+  background: none;  /* Remove any background */
+  border: none;      /* Remove any borders */
+  box-shadow: none;  /* Remove shadow */
+}
+
+
+
+
+.text-box {
+  position: relative;
+  width: 100%; /* Makes it slightly larger to overlap */
+  height: 60%; /* Adjust height as needed */
+  margin: 40px 0 0 4%; /* Negative margin creates overlap */
+  z-index: 2;
+  padding: 1.5rem;
+  transform: translateY(10px); /* Adds vertical offset */
+}
+
+.content-section2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "textbox image";
+  align-items: center;
+  gap: 20px;
+}
+
+.content-image2 {
+  grid-area: image;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.text-box2 {
+  grid-area: textbox;
+  width: 110%;
+  height: 40%;
+  margin: -90px -20% 0 -40px; /* Negative margin on right side now */
+  z-index: 2;
+  padding: 1.5rem;
+  transform: translateY(10px);
+}
 
 
 
@@ -112,10 +561,42 @@
     padding-right: 15px;
   }
 
-  .hidden {
-    display: grid;
+  
+
+  .logo-wrap img {
+    width: 150px;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 25px 25px 25px 25px;
+}
+.logo-wrap { grid-column: span 2; }
+.nav-container { grid-column: span 10; }
+
+
+
+
+  .content-section {
+    gap: 30px;
   }
 
+  .text-box {
+    width: 80%;
+    height: 60%;
+    margin-top: -10px; /* Increase overlap for desktop */
+    padding: 2rem;
+    transform: translateY(10px); /* More offset for desktop */
+  }
+
+  .content-section2 {
+    gap: 30px;
+  }
+
+  .text-box2 {
+    margin-top: 60px;
+    padding: 2rem;
+    transform: translateY(30px);
+  }
 
 .d-col-span-1	{grid-column: span 1 / span 1;}
 .d-col-span-2	{grid-column: span 2 / span 2;}

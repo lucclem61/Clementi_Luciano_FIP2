@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burple - Contact</title>
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <header class="grid-con" id="main-header">
+        <div class="logo-wrap col-span-1 l-col-span-3 d-col-span-2">
+            <img src="images/logo2.jpg" alt="Logo">
+        </div>
+        <div class="nav-container col-span-3 l-col-span-9 d-col-span-10">
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content" id="main-content">
+        <div class="gif-container">
+            <img src="assets/splaskgif.gif" alt="GIF of a can of burple being poured into a glass with ice in">
+        </div>
+        <section class="contact-form-section">
+            <h1>Contact Us</h1>
+            <p>Have questions or concerns? Please fill out the form below and we'll get back to you as soon as possible.</p>
+
+            <form class="contact-form">
+                <div class="form-row">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'First Name')">
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'Last Name')">
+                </div>
+
+                <input type="date" id="dob" name="dob" placeholder="Date of Birth" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'Date of Birth')">
+                <input type="email" id="email" name="email" placeholder="Email Address" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'Email Address')">
+                <textarea id="message" name="message" placeholder="Message" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'Message')"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>   
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo2.jpg" alt="Burple Logo">
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
