@@ -34,3 +34,63 @@ canImages.forEach(function(img) {
 });
 })();
 
+
+
+function clearPlaceholder(input) {
+  input.setAttribute('data-placeholder', input.placeholder);
+  input.placeholder = '';
+}
+
+function resetPlaceholder(input, placeholder) {
+  input.placeholder = placeholder;
+}
+
+function createFallingText(text) {
+  const container = document.querySelector('.falling-text');
+
+  if (!container) {
+      console.error('Falling text container not found!');
+      return;
+  }
+
+  const span = document.createElement('span');
+  span.textContent = text;
+
+  const randomPosition = Math.random() * (window.innerWidth - 100); // px
+  span.style.left = randomPosition + 'px';
+
+  span.style.animationDelay = Math.random() * 2 + 's';
+  container.appendChild(span);
+
+  span.addEventListener('animationend', function () {
+      span.remove();
+  });
+}
+
+function handleLastNameInput(value) {
+  if (value) {
+      createFallingText("Nice to meet you!");
+  }
+}
+
+function handleDateOfBirthChange(value) {
+  if (value) {
+      createFallingText("A great day for feedback!");
+  }
+}
+
+function showDateOfBirthLabel(element) {
+  const label = element.nextElementSibling;
+
+  if (label && label.tagName === 'LABEL') {
+      label.style.display = 'block';
+  }
+}
+
+function hideDateOfBirthLabel(element) {
+  const label = element.nextElementSibling;
+
+  if (label && label.tagName === 'LABEL' && !element.value) {
+      label.style.display = 'none';
+  }
+}
