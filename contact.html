@@ -23,7 +23,7 @@
 
     <main class="content" id="main-content">
         <div class="gif-container">
-            <img src="assets/splaskgif.gif" alt="GIF of a can of burple being poured into a glass with ice in">
+            <img src="images/perspective.jpg" alt="image of a woman on the phone with her laptop open on the Burple contact page">
         </div>
         <section class="contact-form-section">
             <h1>Contact Us</h1>
@@ -31,11 +31,11 @@
 
             <form class="contact-form">
                 <div class="form-row">
-                    <input type="text" id="firstName" name="firstName" placeholder="First Name" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'First Name')">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'First Name')" oninput="handleLastNameInput(this.value)">
                     <input type="text" id="lastName" name="lastName" placeholder="Last Name" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'Last Name')">
                 </div>
 
-                <input type="date" id="dob" name="dob" placeholder="Date of Birth" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'Date of Birth')">
+                <input type="date" id="dob" name="dob" placeholder="Date of Birth" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'Date of Birth')" onchange="handleDateOfBirthChange(this.value)">
                 <input type="email" id="email" name="email" placeholder="Email Address" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'Email Address')">
                 <textarea id="message" name="message" placeholder="Message" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this, 'Message')"></textarea>
 
@@ -50,7 +50,7 @@
             </div>
         </div>
     </footer>
-
+    <div class="falling-text" id="fallingTextContainer"></div>
 
     <script src="js/main.js"></script>
 </body>
