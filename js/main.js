@@ -38,7 +38,9 @@
   this.style.animation = '';
   });
   });
-  // Lightbox
+  
+
+  
   const burpleInfoLink = document.querySelector('#burple-info-link');
   const burpleHistoryLightbox = document.querySelector('#burple-history-lightbox');
   const elements = [burpleInfoLink, burpleHistoryLightbox];
