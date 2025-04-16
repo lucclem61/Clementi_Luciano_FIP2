@@ -47,50 +47,25 @@ function resetPlaceholder(input, placeholder) {
 
 function createFallingText(text) {
   const container = document.querySelector('.falling-text');
-
   if (!container) {
-      console.error('Falling text container not found!');
-      return;
+    console.error('Falling text container not found!');
+    return;
   }
-
   const span = document.createElement('span');
   span.textContent = text;
-
-  const randomPosition = Math.random() * (window.innerWidth - 100); // px
+  const randomPosition = Math.random() * (window.innerWidth - 100);
   span.style.left = randomPosition + 'px';
-
   span.style.animationDelay = Math.random() * 2 + 's';
   container.appendChild(span);
 
   span.addEventListener('animationend', function () {
-      span.remove();
+    span.remove();
   });
 }
 
-function handleLastNameInput(value) {
+
+function handleNameInput(value) {
   if (value) {
-      createFallingText("Nice to meet you!");
-  }
-}
-
-function handleDateOfBirthChange(value) {
-  if (value) {
-      createFallingText("A great day for feedback!");
-  }
-}
-
-function showDateOfBirthLabel(element) {
-  const label = element.nextElementSibling;
-
-  if (label && label.tagName === 'LABEL') {
-      label.style.display = 'block';
-  }
-}
-
-function hideDateOfBirthLabel(element) {
-  const label = element.nextElementSibling;
-
-  if (label && label.tagName === 'LABEL' && !element.value) {
-      label.style.display = 'none';
+    createFallingText("Nice to meet you!");
   }
 }
